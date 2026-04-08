@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Meeting minutes for the Pomodoro Timer team brainstorm session.">
+    <title>Pomodoro Timer — Meeting Minutes March 15, 2025</title>
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <header>
+      <h1>Pomodoro Timer First Brainstorm</h1>
+      <h2>Topic: brainstorming &amp; scope</h2>
+      <h2>Date: March 15, 2025</h2>
+      <p>
+        <span>Internal notes — Software Engineering Team</span><br>
+        Note taker: <i>Alex Kim</i>
+      </p>
+    </header>
+
+    <nav aria-label="On this page">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#unfinished">Unfinished business</a></li>
+        <li><a href="#new-business">New business</a></li>
+        <li><a href="#misc">Miscellaneous</a></li>
+        <li><a href="#media">Diagrams &amp; recordings</a></li>
+        <li><a href="#feedback-form">Feedback form</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="attendance">
+        <h2>Attendance</h2>
+        <div>
+          <p>Present:</p>
+          <ul>
+            <li>River Patel</li>
+            <li>Jamie Chen</li>
+            <li>Morgan Lee</li>
+            <li>Alex Kim</li>
+          </ul>
+          <p>Absent: none</p>
+        </div>
+      </section>
+
+      <section id="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li>Recap last week's timer prototype goals</li>
+          <li>Brainstorm user stories for the MVP</li>
+          <li>Risks: notifications, persistence, and offline mode</li>
+          <li>Action items and owners</li>
+        </ol>
+      </section>
+
+      <section id="unfinished">
+        <h2>Unfinished business</h2>
+        <p>
+          We still owe a short write-up comparing local-first vs cloud-sync storage for session history.
+          <em>Decision needed</em> before we lock the data model.
+        </p>
+        <hr>
+        <h3>Open questions from last time</h3>
+        <p>
+          Should the default work interval stay at <i>25 minutes</i> or become configurable on first launch?
+        </p>
+      </section>
+
+      <section id="new-business">
+        <h2>New business</h2>
+        <p>
+          New topic: add an optional <strong>end-of-session sound</strong>.
+        </p>
+        <hr>
+        <h3>Dependencies</h3>
+        <p>
+          Jamie will try <i>Web Audio API</i> to implement the end-of-session sound.
+        </p>
+      </section>
+
+      <section id="misc">
+        <h2>Miscellaneous</h2>
+        <details>
+          <summary>Questions</summary>
+          <p>
+            <b>Note:</b> Team lunch moved to Thursday this week.
+          </p>
+        </details>
+      </section>
+
+      <section id="media">
+        <h2>Diagrams &amp; recordings</h2>
+        <h3>Whiteboard sketch</h3>
+        <p>
+          Rough architecture diagram:
+        </p>
+        <p>
+          <img src="diagram.png" width="400" height="300" alt="Simple block diagram: Timer UI box connected to Local State, optional Sync Service, and Notification Manager.">
+        </p>
+
+        <h3>Audio recording</h3>
+        <audio controls>
+          <source src="meeting-video.mp4" type="audio/mp4">
+          Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video recording</h3>
+        <video controls width="320" height="240">
+          <source src="meeting-video.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <section id="feedback-form">
+        <h2>Feedback</h2>
+        <p>Submit your feedback here.</p>
+        <form>
+          <fieldset>
+            <legend>Feedback</legend>
+
+            <p>
+              <label for="nickname">Name</label><br>
+              <input id="nickname" type="text" name="nickname" placeholder="e.g. John Doe">
+            </p>
+
+            <p>
+              <label for="retro-date">Date you joined this project</label><br>
+              <input id="retro-date" type="date" name="retro-date">
+            </p>
+
+            <p>
+              <label for="feedback-type">Pick a feedback type</label><br>
+              <input id="feedback-type" type="text" name="feedback-type" list="feedback-type-suggestions" placeholder="Type or choose">
+              <datalist id="feedback-type-suggestions">
+                <option value="Positive feedback">Positive feedback</option>
+                <option value="Negative feedback">Negative feedback</option>
+                <option value="Suggestions">Suggestions</option>
+              </datalist>
+            </p>
+
+            <p>
+              <label for="feedback-improvement">What should we improve?</label><br>
+              <select id="feedback-improvement" name="feedback-improvement">
+                <option value="">Select one</option>
+                <option value="nothing">Nothing</option>
+                <option value="Meeting frequency">Meeting frequency</option>
+                <option value="Communication channels">Communication channels</option>
+              </select>
+            </p>            
+
+            <p>What should we stop doing?</p>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="stop" value="stop-doing">
+                  Stop using slack
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="stop" value="stop-doing">
+                  Stop using discord
+                </label>
+              </li>
+            </ul>
+
+            <p>
+              <label">Anything else?</label><br>
+              <textarea rows="4" cols="40" placeholder="Feedback, suggestions, or wild ideas…"></textarea>
+            </p>
+
+            <p>
+              <button type="button">Submit feedback</button>
+            </p>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Minutes compiled for SWE team meeting.</p>
+      <p><small>End of document.</small></p>
+    </footer>
+  </body>
+</html>
