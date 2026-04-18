@@ -3,23 +3,48 @@
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Meeting minutes for the Pomodoro Timer team brainstorm session.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer — Meeting Minutes March 15, 2025</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .style-example {
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+    </style>
   </head>
   <body>
-    <header>
+    <header id="top" class="hero">
       <h1>Pomodoro Timer First Brainstorm</h1>
       <h2>Topic: brainstorming &amp; scope</h2>
       <h2>Date: March 15, 2025</h2>
-      <p>
+      <p class="style-example" style="border-left: 4px solid blue; padding-left: 12px;">
         <span>Internal notes — Software Engineering Team</span><br>
         Note taker: <i>Alex Kim</i>
       </p>
+      <div class="status-row" aria-label="Meeting stats">
+        <div class="status-card">
+          <h3>Focus</h3>
+          <p>MVP brainstorming</p>
+        </div>
+        <div class="status-card">
+          <h3>Priority</h3>
+          <p>Offline timer reliability</p>
+        </div>
+        <div class="status-card">
+          <h3>Next step</h3>
+          <p>Assign prototype owners</p>
+        </div>
+      </div>
     </header>
 
-    <nav aria-label="On this page">
+    <nav class="page-nav" aria-label="On this page">
       <h2>On this page</h2>
-      <ul>
+      <ul class="nav-list">
         <li><a href="#attendance">Attendance</a></li>
         <li><a href="#agenda">Agenda</a></li>
         <li><a href="#unfinished">Unfinished business</a></li>
@@ -30,8 +55,8 @@
       </ul>
     </nav>
 
-    <main>
-      <section id="attendance">
+    <main class="content-grid">
+      <section id="attendance" class="panel">
         <h2>Attendance</h2>
         <div>
           <p>Present:</p>
@@ -45,7 +70,7 @@
         </div>
       </section>
 
-      <section id="agenda">
+      <section id="agenda" class="panel">
         <h2>Agenda</h2>
         <ol>
           <li>Recap last week's timer prototype goals</li>
@@ -53,9 +78,14 @@
           <li>Risks: notifications, persistence, and offline mode</li>
           <li>Action items and owners</li>
         </ol>
+        <div class="tag-row">
+          <span class="tag">MVP</span>
+          <span class="tag">Timers</span>
+          <span class="tag">Offline</span>
+        </div>
       </section>
 
-      <section id="unfinished">
+      <section id="unfinished" class="panel">
         <h2>Unfinished business</h2>
         <p>
           We still owe a short write-up comparing local-first vs cloud-sync storage for session history.
@@ -68,7 +98,7 @@
         </p>
       </section>
 
-      <section id="new-business">
+      <section id="new-business" class="panel">
         <h2>New business</h2>
         <p>
           New topic: add an optional <strong>end-of-session sound</strong>.
@@ -80,17 +110,7 @@
         </p>
       </section>
 
-      <section id="misc">
-        <h2>Miscellaneous</h2>
-        <details>
-          <summary>Questions</summary>
-          <p>
-            <b>Note:</b> Team lunch moved to Thursday this week.
-          </p>
-        </details>
-      </section>
-
-      <section id="media">
+      <section id="media" class="panel media-panel">
         <h2>Diagrams &amp; recordings</h2>
         <h3>Whiteboard sketch</h3>
         <p>
@@ -113,7 +133,7 @@
         </video>
       </section>
 
-      <section id="feedback-form">
+      <section id="feedback-form" class="panel">
         <h2>Feedback</h2>
         <p>Submit your feedback here.</p>
         <form>
@@ -177,10 +197,24 @@
           </fieldset>
         </form>
       </section>
+
+
+
+      <section id="misc" class="panel">
+        <h2>Miscellaneous</h2>
+        <details>
+          <summary>Questions</summary>
+          <p>
+            <b>Note:</b> Team lunch moved to Thursday this week.
+          </p>
+        </details>
+      </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>Minutes compiled for SWE team meeting.</p>
+      <p class="footer-inline">Prepared for class review.</p>
+      <p class="hidden-note">This line is hidden with display none.</p>
       <p><small>End of document.</small></p>
     </footer>
   </body>
